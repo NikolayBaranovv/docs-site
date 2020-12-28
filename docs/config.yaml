@@ -1,0 +1,15 @@
+baseURL: http://example.org/
+languageCode: ru-ru
+title: Документация Autoscan и ZONT
+theme: ace-documentation
+params:
+  ordersectionsby: weight
+  disableSearch: false
+  disableReadmoreNav: true
+  highlightClientSide: false
+  menushortcutsnewtab: true
+menu:
+  shortcuts:
+    - name: <i class='fab fa-github'></i>
+      url: 'https://github.com/vantagedesign/ace-documentation'
+      weight: 10
