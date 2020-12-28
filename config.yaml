@@ -1,4 +1,4 @@
-baseURL: http://example.org/
+baseURL: https://zont-documentation.onrender.com/
 languageCode: ru-ru
 title: Документация Autoscan и ZONT
 theme: ace-documentation
