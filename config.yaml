@@ -11,5 +11,5 @@ params:
 menu:
   shortcuts:
     - name: <i class='fab fa-github'></i>
-      url: 'https://github.com/vantagedesign/ace-documentation'
+      url: 'https://github.com/NikolayBaranovv/docs-site'
       weight: 10

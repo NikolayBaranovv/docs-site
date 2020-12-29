@@ -6,7 +6,7 @@
 *   @license https://github.com/vantagedesign/ace-documentation/blob/master/LICENSE
 * ------------------------------------------------------------------------ */
 
-$primary:       #007bff;
+$primary:       #05adca;
 $secondary:     #6610f2;
 $success:       #28a745;
 $info:          #17a2b8;
@@ -30,6 +30,10 @@ $dark:          #343a40;
 .main > h3, .main > h4, .main > h5, .main > h6{
     padding-top: 4rem;
     margin-top:-3rem;
+}
+
+.main img {
+    max-width: 100% !important;
 }
 
 .haschildren ul{
