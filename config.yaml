@@ -11,5 +11,8 @@ params:
 menu:
   shortcuts:
     - name: "<i class='fab fa-github'></i>"
+      url: 'https://play.google.com/store/apps/details?id=com.microline.autoscan&hl=ru&gl=US'
+      weight: 1
+    - name: "<i class='fab fa-github'></i>"
       url: 'https://github.com/NikolayBaranovv/docs-site'
       weight: 10

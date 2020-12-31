@@ -1,6 +1,7 @@
 ---
 title: "Модуль технического обслуживания"
 date: 2020-12-28T15:16:19+03:00
+weight: 5
 draft: false
 typora-root-url: ../../static
 ---
