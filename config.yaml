@@ -1,6 +1,6 @@
-baseURL: https://autoscan-zont-documentation.onrender.com
+baseURL: 'https://autoscan-zont-documentation.onrender.com'
 languageCode: ru-ru
-title: Документация Autoscan и ZONT
+title: 'Документация Autoscan'
 theme: ace-documentation
 params:
   ordersectionsby: weight
@@ -10,6 +10,6 @@ params:
   menushortcutsnewtab: true
 menu:
   shortcuts:
-    - name: <i class='fab fa-github'></i>
+    - name: "<i class='fab fa-github'></i>"
       url: 'https://github.com/NikolayBaranovv/docs-site'
       weight: 10
