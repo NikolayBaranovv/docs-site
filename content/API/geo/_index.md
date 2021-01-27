@@ -44,6 +44,8 @@ typora-root-url: ../../static
 }
 ```
 
+### Пример
+
 ```python
 import requests
 
@@ -57,8 +59,8 @@ result = requests.post(
 address = result["address"]
 errors = result["errors"]
 
-print(address) //['Заводская, с2', 'Кремль, Нижегородский кремль']
-print(errors) //[None, None]
+print(address) #['Заводская, с2', 'Кремль, Нижегородский кремль']
+print(errors) #[None, None]
 ```
 
 
@@ -75,15 +77,20 @@ print(errors) //[None, None]
 
 ### Параметры
 
+| *Имя*      | *Тип* | *Описание*                                                   |
+| ---------- | ----- | ------------------------------------------------------------ |
+| requests\* | array | Массив с запросами вида [{Request}](/api/geo/#тип-request), см. [пример](/api/geo/#пример-1). |
+
+\* - обозначены обязательные параметры.
+
+### Тип Request
+
 | *Имя*      | *Тип*    | *Описание*                                                   |
 | ---------- | -------- | ------------------------------------------------------------ |
-| requests\* | array    | Массив с запросами вида {device_id: …, data_types: […], mintime: …, maxtime: …} |
 | device_id  | int      | ID-устройства в системе                                      |
 | data_types | array    | ["gps"] - запросим GPS-точки                                 |
 | mintime    | unixtime | Время в секундах от начала [эпохи Unix](https://ru.wikipedia.org/wiki/Unix-%D0%B2%D1%80%D0%B5%D0%BC%D1%8F), значение от которого запрашивается маршрут |
 | maxtime    | unixtime | Время в секундах от начала [эпохи Unix](https://ru.wikipedia.org/wiki/Unix-%D0%B2%D1%80%D0%B5%D0%BC%D1%8F), значение до которого запрашивается маршрут |
-
-\* - обозначены обязательные параметры.
 
 ### Результат
 
@@ -103,8 +110,6 @@ print(errors) //[None, None]
 }
 ```
 
-### 
-
 | *Имя*      | *Тип*         | *Описание*                                |
 | ---------- | ------------- | ----------------------------------------- |
 | time       | unixtime      | Время записи этой координатной точки      |
@@ -119,7 +124,9 @@ print(errors) //[None, None]
 | altitude   | int \| null   | Высота над уровнем моря (м)               |
 | avg_va     | float \| null | Усреднённое вертикальное ускорение        |
 
-Наш сервис получает данные с прибором и строит маршруты на карте по координатам.
+Наш сервис получает данные с прибора и строит маршруты на карте по координатам.
+
+### Пример
 
 ```python
 import requests
@@ -135,18 +142,18 @@ result = requests.post(
         		"data_types": ["gps"],
         		"mintime": 1611739095,
         		"maxtime": 1611739133
-            }
+            },
         ]
          }
 ).json()
 
 gps_point = result["responses"][0]["gps"]
 print(gps_point) 
-//[
-   // [1611739095, 38.492817, 55.278583, 56, 0, False, None, None, None, None, None], 
-   // [1611739103, 38.49165, 55.279567, 50, 0, False, None, None, None, None, None],
-   // [1611739118, 38.489783, 55.281133, 61, 0, False, None, None, None, None, None],
-   // [1611739124, 38.488817, 55.281933, 71, 0, False, None, None, None, None, None],
-   // [1611739133, 38.48715, 55.2833, 82, 0, False, None, None, None, None, None]
-//]
+#[
+   # [1611739095, 38.492817, 55.278583, 56, 0, False, None, None, None, None, None], 
+   # [1611739103, 38.49165, 55.279567, 50, 0, False, None, None, None, None, None],
+   # [1611739118, 38.489783, 55.281133, 61, 0, False, None, None, None, None, None],
+   # [1611739124, 38.488817, 55.281933, 71, 0, False, None, None, None, None, None],
+   # [1611739133, 38.48715, 55.2833, 82, 0, False, None, None, None, None, None]
+#]
 ```
