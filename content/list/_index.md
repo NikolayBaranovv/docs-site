@@ -1,7 +1,7 @@
 ---
 title: "Список устройств"
 date: 2021-01-09T09:13:17+03:00
-draft: true
+draft: false
 weight: 1
 typora-root-url: ../../static
 ---
